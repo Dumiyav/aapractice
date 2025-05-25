@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Amidinie Amarasinghe - Pediatrician</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-stethoscope text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                            Dr. Amidinie Amarasinghe
+                        </h1>
+                        <p class="text-gray-600 text-sm font-medium">PEDIATRICIAN</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="flex items-center space-x-2 text-gray-600">
+                        <i class="fas fa-phone text-blue-500"></i>
+                        <span class="text-sm">0773 047 921</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-gray-600">
+                        <i class="fas fa-envelope text-blue-500"></i>
+                        <span class="text-sm">ami@aapractice.com</span>
+                    </div>
+                </div>
+                
+                <button class="md:hidden text-gray-600 hover:text-purple-600 transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="border-t border-gray-100">
+                <div class="flex space-x-8 py-4">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition-colors">HOME</a>
+                    <a href="#profile" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition-colors">PROFILE</a>
+                    <a href="#channel" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition-colors">CHANNEL</a>
+                    <a href="#advice" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition-colors">ADVICE</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600 font-medium transition-colors">CONTACT</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 relative overflow-hidden py-24">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between min-h-[500px]">
+                <div class="lg:w-1/2 text-white slide-in">
+                    <div class="mb-6">
+                        <span class="inline-block bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                            ✨ Trusted Pediatric Care
+                        </span>
+                    </div>
+                    <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        <span class="text-white">Complete</span>
+                        <span class="block bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
+                            Pediatric Care
+                        </span>
+                    </h2>
+                    <p class="text-xl mb-8 text-gray-200 leading-relaxed max-w-lg">
+                        Expert medical care with compassion and dedication for your child's healthy development and bright future.
+                    </p>
+                    
+                    <!-- Key benefits -->
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span class="text-sm">Comprehensive Care</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                            <i class="fas fa-clock text-blue-400"></i>
+                            <span class="text-sm">Flexible Hours</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                            <i class="fas fa-heart text-pink-400"></i>
+                            <span class="text-sm">Caring Approach</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-xl transform hover:scale-105">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            Book Appointment
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            Call Now
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 mt-12 lg:mt-0 flex justify-center">
+                    <div class="relative">
+                        <!-- Main circle -->
+                        <div class="w-80 h-80 bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-lg rounded-full flex items-center justify-center border border-white/20 shadow-2xl animate-float">
+                            <div class="w-64 h-64 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                                <i class="fas fa-heart text-7xl bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating icons with better positioning -->
+                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                            <i class="fas fa-baby text-white text-xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                            <i class="fas fa-syringe text-white text-xl"></i>
+                        </div>
+                        <div class="absolute top-1/2 -right-8 w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                            <i class="fas fa-stethoscope text-white text-sm"></i>
+                        </div>
+                        <div class="absolute top-1/2 -left-8 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                            <i class="fas fa-pills text-white text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Comprehensive pediatric care tailored to your child's unique needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Welcome Card -->
+                <div class="card-hover bg-gradient-to-br from-green-400 to-green-600 rounded-2xl p-8 text-white">
+                    <div class="flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
+                        <i class="fas fa-hand-holding-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Ayubowan!</h3>
+                    <p class="text-green-100 mb-4">Welcome to our practice! Your quick guide about channelling hours and helpful tips for better health for your children.</p>
+                    <p class="text-sm text-green-200">The easiest and most convenient way to channel is via echannelling.com or by dialing 225 from your mobile.</p>
+                </div>
+
+                <!-- Baby Checks Card -->
+                <div class="card-hover bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl p-8 text-white">
+                    <div class="flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
+                        <i class="fas fa-baby text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Baby Checks</h3>
+                    <div class="space-y-2 text-pink-100">
+                        <p>• Baby Checks</p>
+                        <p>• Immunization Schedule</p>
+                        <p>• What Causes Colic?</p>
+                        <p>• What Are Birthmarks?</p>
+                        <p>• What Is Hepatitis B?</p>
+                        <p>• Is Bed-wetting Normal?</p>
+                        <p>• Why Does Your Baby Cry?</p>
+                        <p>• Keeping Your Baby Healthy</p>
+                    </div>
+                </div>
+
+                <!-- Phone Numbers Card -->
+                <div class="card-hover bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl p-8 text-white">
+                    <div class="flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Phone Numbers</h3>
+                    <div class="space-y-4 text-purple-100">
+                        <div>
+                            <p class="font-semibold">Ninewells: (011) 4 520699</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Ninewells Family Wellness:</p>
+                            <p>0112 049 999 or 0770 350 190</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Joseph Fraser:</p>
+                            <p>0112 049 999</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Kids & Teens:</p>
+                            <p>0114 700 700</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Channelling Card -->
+                <div class="card-hover bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl p-8 text-white">
+                    <div class="flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
+                        <i class="fas fa-calendar-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Channelling</h3>
+                    <p class="text-cyan-100 mb-6">I channel 6 days a week at selected private hospitals. The channelling hours and locations do change occasionally, so please do check in advance.</p>
+                    <p class="text-cyan-200 text-sm">I strongly recommend that you make an appointment prior to your visit.</p>
+                    
+                    <div class="mt-6 space-y-2">
+                        <div class="bg-white/20 rounded-lg p-3">
+                            <i class="fas fa-stethoscope mr-2"></i>
+                            <span class="text-sm">Professional Care</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#profile" class="group flex flex-col items-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-md text-white text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-gray-800">Profile</span>
+                </a>
+                
+                <a href="#channel" class="group flex flex-col items-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-400 to-pink-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-calendar-check text-white text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-gray-800">Channel</span>
+                </a>
+                
+                <a href="#advice" class="group flex flex-col items-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-lightbulb text-white text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-gray-800">Advice</span>
+                </a>
+                
+                <a href="#contact" class="group flex flex-col items-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-envelope text-white text-xl"></i>
+                    </div>
+                    <span class="font-semibold text-gray-800">Contact</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-stethoscope text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Dr. Amidinie Amarasinghe</h3>
+                            <p class="text-blue-200">Pediatrician</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-100">Providing comprehensive pediatric care with compassion and expertise.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#home" class="block text-blue-200 hover:text-white transition-colors">Home</a>
+                        <a href="#profile" class="block text-blue-200 hover:text-white transition-colors">Profile</a>
+                        <a href="#channel" class="block text-blue-200 hover:text-white transition-colors">Channel</a>
+                        <a href="#advice" class="block text-blue-200 hover:text-white transition-colors">Advice</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-blue-300"></i>
+                            <span class="text-blue-100">0773 047 921</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-blue-300"></i>
+                            <span class="text-blue-100">ami@aapractice.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-8 pt-8 text-center">
+                <p class="text-blue-200">&copy; 2025 aapractice. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md', 'bg-white/95');
+            } else {
+                header.classList.remove('backdrop-blur-md', 'bg-white/95');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
